@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --lightCyan: #4abebd;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Karla';
+    background-color: var(--LightGray);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 650px;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "top top"
+    "left right";
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px #00000010;
+}
+
+.top, .right, .left{
+    font-size: 14px;
+    padding: 2rem 2rem 0.5rem 2rem;
+}
+
+.top{
+    padding-right: 5rem;
+    grid-area: top;
+    background-color: white;
+}
+
+.left{
+    grid-area: left;
+    background-color: var(--Cyan);
+    color: var(--LightGray);
+}
+
+.right{
+    grid-area: right;
+    background-color: var(--lightCyan);
+    color: var(--LightGray);
+}
+
+.top-header{
+    color: var(--Cyan);
+    margin-bottom: 1.5rem;
+}
+
+.top-header-2{
+    font-size: 19px;
+    color: var(--BrightYellow);
+    margin-bottom: 1rem;
+}
+
+.top-description{
+    color: var(--GrayishBlue);
+    font-size: 16px;
+}
+
+.left-header{
+    font-size: 19px;
+    margin-bottom: 1rem;
+}
+
+.digit{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+span{
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 60%;
+    margin-left: 10px;
+}
+
+.left-description{
+    font-size: 17.5px;
+    margin-bottom: 1.5rem;
+}
+
+button{
+    width: 100%;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px #005e5666;
+    background-color: var(--BrightYellow);
+    margin-bottom: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.right-header{
+    font-size: 19px;
+    margin-bottom: 1rem;
+}
+
+.right-description{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+@media (max-width: 500px){
+
+    body{
+        padding: 2rem;
+    }
+
+    main{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "top"
+        "left"
+        "right";
+    }
+
+    .top, .right, .left{
+        font-size: 10px;
+    }
+
+    .top-header-2{
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .top-description{
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: 0.2px;
+        margin-bottom: 1rem;
+    }
+
+    .digit{
+        font-size: 35px;
+        margin-bottom: 0.3em;
+    }
+    span{
+        font-size: 17px;
+    }
+
+    button{
+        padding: 20px;
+        border-radius: 7px;
+    }
+    
+    .right-description{
+        margin: 1.5rem 0px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .attribution { 
+        font-size: 12px; 
+        text-align: center; 
+        padding: 0px 75px;
+    }
+}
